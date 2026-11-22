@@ -1,0 +1,7 @@
+[2026-11-22T02:56:19Z] === AST ITERATION 1 START | repo=near/near-cli-rs sha=64e9bf93 ===
+[2026-11-22T02:56:19Z] [iter=1] PHASE START: ast repo=near/near-cli-rs sha=64e9bf93
+[2026-11-22T02:56:19Z] [iter=1] Building AST aggregate chunks
+[2026-11-22T02:57:31Z] [iter=1] AST chunks built count=1 triples=1173499
+[2026-11-22T02:57:31Z] [iter=1] AST .complete marker written path=/home/runner/work/forx/forx/storage/aggregate/ast/64e9bf93493530c1436e8a3e888894e480c8eb98/.complete
+[2026-11-22T02:57:31Z] [iter=1] PHASE END: ast elapsed_s=72 elapsed_min=1.2
+[2026-11-22T02:57:31Z] [iter=1] Wrote .next-action.json next_action=enrich path=/home/runner/work/forx/forx/storage/aggregate/.next-action.json
