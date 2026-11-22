@@ -1,0 +1,46 @@
+[2026-11-22T03:00:05Z] === ENRICH ITERATION 1 START | repo=near/near-cli-rs sha=64e9bf93 ===
+[2026-11-22T03:00:05Z] [iter=1] PHASE START: enrich repo=near/near-cli-rs sha=64e9bf93 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/64e9bf93-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/64e9bf93493530c1436e8a3e888894e480c8eb98.nq.gz
+[2026-11-22T03:01:23Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-11-22T03:01:32Z] [iter=1] AST store loaded triples=1173491 load_secs=9 mem_mb=896 MB
+[2026-11-22T03:01:32Z] [iter=1] Step 2: Finding LSP targets mem_mb=896 MB
+[2026-11-22T03:01:35Z] [iter=1] LSP targets found call_sites=8499 imports=291 extends=0 implements=20 secs=2
+[2026-11-22T03:01:36Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=896 MB
+[2026-11-22T03:01:41Z] [iter=1] Position index built positions=78652 nodes_with_types=101073 secs=5 mem_mb=896 MB
+[2026-11-22T03:01:41Z] [iter=1] Step 3: Starting LSP resolution mem_mb=896 MB already_completed_types=[] already_completed_files=0
+[2026-11-22T03:01:41Z] [iter=1] Resolving target type target_type=call_site count=8499
+[2026-11-22T03:03:42Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.6 files_done=0 resolved=0 errors=0 current=src/common.rs
+[2026-11-22T03:05:04Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.0 files_done=1 resolved=1065 errors=0 current=src/commands/contract/view_storage/output_format/as_text.rs
+[2026-11-22T03:05:54Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.8 files_done=6 resolved=1465 errors=0 current=src/types/ft_properties.rs
+[2026-11-22T03:06:27Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.4 files_done=9 resolved=1804 errors=0 current=tests/find_network_where_account_exist.rs
+[2026-11-22T03:06:57Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.9 files_done=11 resolved=1992 errors=0 current=src/commands/transaction/construct_transaction/add_action_1/add_action/add_key/use_manually_provided_seed_phrase/mod.rs
+[2026-11-22T03:07:28Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.4 files_done=17 resolved=2198 errors=0 current=src/transaction_signature_options/sign_later/save_to_file.rs
+[2026-11-22T03:07:58Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.9 files_done=22 resolved=2402 errors=0 current=src/commands/tokens/send_ft_call/mod.rs
+[2026-11-22T03:08:29Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=8.4 files_done=26 resolved=2694 errors=0 current=src/commands/account/update_social_profile/sign_as.rs
+[2026-11-22T03:09:00Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=8.9 files_done=34 resolved=3054 errors=0 current=src/commands/account/create_account/create_implicit_account/use_auto_generation.rs
+[2026-11-22T03:09:33Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=9.5 files_done=39 resolved=3320 errors=0 current=src/commands/transaction/construct_transaction/add_action_2/add_action/call_function/mod.rs
+[2026-11-22T03:10:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=10.1 files_done=45 resolved=3608 errors=0 current=src/commands/tokens/send_ft_call/amount_ft.rs
+[2026-11-22T03:10:49Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=10.7 files_done=52 resolved=3875 errors=0 current=src/transaction_signature_options/submit_dao_proposal/mod.rs
+[2026-11-22T03:11:21Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=11.3 files_done=59 resolved=4090 errors=0 current=src/js_command_match/transactions/status.rs
+[2026-11-22T03:12:05Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=12.0 files_done=64 resolved=4385 errors=0 current=src/commands/account/add_key/access_key_type/mod.rs
+[2026-11-22T03:12:36Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=12.5 files_done=75 resolved=4699 errors=0 current=src/commands/contract/verify/mod.rs
+[2026-11-22T03:13:07Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=13.0 files_done=81 resolved=4863 errors=0 current=src/commands/extensions/self_update/mod.rs
+[2026-11-22T03:13:38Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=13.5 files_done=91 resolved=5130 errors=0 current=src/commands/account/create_account/fund_myself_create_account/add_key/autogenerate_new_keypair/mod.rs
+[2026-11-22T03:14:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=14.1 files_done=101 resolved=5374 errors=0 current=src/types/account_id.rs
+[2026-11-22T03:14:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=14.7 files_done=114 resolved=5629 errors=0 current=src/types/signed_delegate_action.rs
+[2026-11-22T03:15:32Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=15.4 files_done=126 resolved=5979 errors=0 current=src/commands/account/update_social_profile/profile_args_type/json_args.rs
+[2026-11-22T03:16:05Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=16.0 files_done=138 resolved=6192 errors=0 current=src/commands/account/export_account/using_private_key/mod.rs
+[2026-11-22T03:16:36Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=16.5 files_done=148 resolved=6383 errors=0 current=src/commands/account/update_social_profile/profile_args_type/base64_args.rs
+[2026-11-22T03:17:07Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=17.0 files_done=162 resolved=6580 errors=0 current=src/commands/transaction/construct_transaction/add_action_2/add_action/transfer/mod.rs
+[2026-11-22T03:17:40Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=17.6 files_done=173 resolved=6777 errors=0 current=src/commands/message/sign_nep413/message_type/utf8.rs
+[2026-11-22T03:18:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=18.1 files_done=190 resolved=6988 errors=0 current=src/transaction_signature_options/sign_with_mpc/mpc_sign_result.rs
+[2026-11-22T03:18:42Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=18.6 files_done=213 resolved=7146 errors=0 current=src/commands/contract/view_storage/keys_to_view/all_keys.rs
+[2026-11-22T03:18:59Z] [iter=1] Target type resolved target_type=call_site resolved=7253 errors=0 secs=1038 mem_mb=896 MB
+[2026-11-22T03:18:59Z] [iter=1] Resolving target type target_type=import_statement count=291
+[2026-11-22T03:19:24Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=19.3 files_done=1 resolved=3 errors=0 current=src/commands/transaction/construct_transaction/add_action_2/add_action/call_function/mod.rs
+[2026-11-22T03:19:43Z] [iter=1] Target type resolved target_type=import_statement resolved=291 errors=0 secs=44 mem_mb=896 MB
+[2026-11-22T03:19:43Z] [iter=1] Resolving target type target_type=implements_clause count=20
+[2026-11-22T03:19:56Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=19.8 files_done=0 resolved=0 errors=0 current=src/types/api_key.rs
+[2026-11-22T03:20:22Z] [iter=1] Target type resolved target_type=implements_clause resolved=20 errors=0 secs=38 mem_mb=896 MB
+[2026-11-22T03:33:40Z] [iter=1] Step 5: Writing final enrichment file triples=90826
+[2026-11-22T03:33:41Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/64e9bf93493530c1436e8a3e888894e480c8eb98.nq.gz size_kb=2227
+[2026-11-22T03:33:41Z] [iter=1] PHASE END: enrich elapsed_s=2016 elapsed_min=33.6 total_triples=90826
