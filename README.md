@@ -6,29 +6,27 @@ RDF knowledge graph data for [near/near-cli-rs](https://github.com/near/near-cli
 
 ## How to use this data
 
-The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you have uv installed, just copy/paste this into your terminal:
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
 
 ```bash
-uv tool install git+https://github.com/repolex-ai/lexq
+cargo install --git https://github.com/repolex-ai/rlex
 ```
 
-This installs lexq onto your system, in your user context. Verify the install:
+Verify the install:
 
 ```bash
-lexq --help
+rlex --help
 ```
 
-**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
 
 To load this repo's data:
 
 ```bash
-lexq download near/near-cli-rs
+rlex download near/near-cli-rs
 ```
 
-This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
 
 ## Data structure
 
@@ -38,6 +36,8 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 .
 ├── aggregate
 │   ├── ast
+│   │   ├── 64e9bf93493530c1436e8a3e888894e480c8eb98
+│   │   │   └── chunk-001.nq.gz
 │   │   ├── 76394205f079e1d6d907ba6c193b6fd632e7ab26
 │   │   │   └── chunk-001.nq.gz
 │   │   ├── b067abdefa0306a13395e512f5453dda4b3579d4
@@ -49,16 +49,20 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   └── fd0d64ce56880ef39f868ec28e48f7d31a0557e4
 │   │       └── chunk-001.nq.gz
 │   ├── lsp
+│   │   ├── 64e9bf93493530c1436e8a3e888894e480c8eb98.nq.gz
 │   │   ├── 76394205f079e1d6d907ba6c193b6fd632e7ab26.nq.gz
 │   │   ├── c9cda7bcb76d513c212e347a76ddacdb941ed755.nq.gz
 │   │   ├── de007e43effb520e79c7ea88f89bf8742bb486c2.nq.gz
 │   │   └── fd0d64ce56880ef39f868ec28e48f7d31a0557e4.nq.gz
 │   └── repolex
+│       ├── 64e9bf93493530c1436e8a3e888894e480c8eb98
+│       │   └── chunk-001.nq.gz
 │       ├── c9cda7bcb76d513c212e347a76ddacdb941ed755
 │       │   └── chunk-001.nq.gz
 │       └── fd0d64ce56880ef39f868ec28e48f7d31a0557e4
 │           └── chunk-001.nq.gz
 └── blob
+    ├── 004567c6822cf11e563f376ed38dccb14d53f49d.nq.gz
     ├── 00b41cca8b24a45abb78ae15483f1a6cffca4332.nq.gz
     ├── 019bb59539b2325f9f79c70b1d844493f87c9104.nq.gz
     ├── 01a678e1a4cd2417347e65c0f50dcf41a7da1b4a.nq.gz
@@ -75,6 +79,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 0781baa3d946e00a9f302f9857a68efc8ee00e28.nq.gz
     ├── 07c25dd9443d63d798506a7b48f7119ca3d3287b.nq.gz
     ├── 07f35e8a6167b4f560e258e4fb4c16eb3f86b24a.nq.gz
+    ├── 0873d610956a37c3405f9c5787b7fccf255a95a4.nq.gz
     ├── 09c0daed42be253aef85b18c7a7877dcfe8e1719.nq.gz
     ├── 0a06de710f7f6c6dafb8e70ebdd2dae7551e8d05.nq.gz
     ├── 0a27036fcf9723d7c80757b47c94a6493095117d.nq.gz
@@ -113,6 +118,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 1b9eef6a19d867fda0bf5163b6335376304b3d28.nq.gz
     ├── 1c0beb6a0ac029ceef4f9ca47e7ed2d2e4d32c73.nq.gz
     ├── 1c5d91a7a747b6a16ec8db961a94157f2b1f01de.nq.gz
+    ├── 1c84639fb1eff69f82c7e1f0607e1ca903511830.nq.gz
     ├── 1d12daa93b92ed3e1ba49fbfd2ee969c4ad935f8.nq.gz
     ├── 1dcd080136364d6f6d7fe5d0ba548fa7fba58e6f.nq.gz
     ├── 1e1af6db2528266634c96487f93a3004bf40cd2f.nq.gz
@@ -163,7 +169,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 368952df9cd185efe64810b1e438abad1e32a9d3.nq.gz
     ├── 368ac01a844e8a1baf5261aea1bf4510001cb175.nq.gz
     ├── 36c74329a6730045cc9c8f8d3c71d6d4813541c2.nq.gz
+    ├── 370d73caef387eefc10a619ca7f503fcc538cd62.nq.gz
     ├── 375206befbd1115b517c478901d016f8d81ef589.nq.gz
+    ├── 3765e723abc4cb9e3c51eaa4665b7d7ce828f14a.nq.gz
     ├── 378b468c2dfe103112cf63a5c22699ac28691eb2.nq.gz
     ├── 38e5498784b779e20c53512b37733bc1844d4e44.nq.gz
     ├── 39d400ff45103f89b77b154ebee6092963e2d151.nq.gz
@@ -222,6 +230,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 5343f06de7efd548a3a3bb7147096a842df9af25.nq.gz
     ├── 534d5ac0c63f401a19c136dd0caef561c7a8a24a.nq.gz
     ├── 54323c7adc267390bc346891d904f204dcaab48c.nq.gz
+    ├── 5512dd7daefe0b7f6d5a5cc0f0d861dec7e06eb2.nq.gz
     ├── 553253f29d1a0a246e1555878bac5de236f6f480.nq.gz
     ├── 559fb6df3244e8095b6c7d42914e4baa2bf64aaa.nq.gz
     ├── 55ba6db59ef2e8add991314e7dcadc24f40481f5.nq.gz
@@ -231,25 +240,16 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 57db67debc066bc550944ddca40401230f8aa4bc.nq.gz
     ├── 590c6a2581196bf3c20ec5fdc73e15ae9fe37c52.nq.gz
     ├── 59f983ea4ce5e543c4500ee0fc5b2cb3457e6bfd.nq.gz
+    ├── 5a7e1600e3f6ec10f81ad99e96d804c38c39f488.nq.gz
     ├── 5c40f0728eb6e0a02942849b1d4409816c5eeba6.nq.gz
     ├── 5c4990560305c82ddee6ea581d5997dfb1fe1f71.nq.gz
     ├── 5c86d0dbf42e8d4a0602fd4eadf4185372e94acd.nq.gz
     ├── 5cbdce43a5f134f4d72e7c11abd87145521a4b25.nq.gz
     ├── 5d950514e4aa0ace47f209ecaf6478a16da84f22.nq.gz
     ├── 5dab65e04e4016f625c50eb58ffc811a009aafc5.nq.gz
-    ├── 5eafda9bcb4edf840cc740be63e6e41aa7c95be4.nq.gz
-    ├── 5f1eb9c7362534f730f16b948530bab674969d14.nq.gz
-    ├── 5f2c2731b8264a842ef80f441eb5f4398f406e5d.nq.gz
-    ├── 6038ae9938078b9d61a3262ab77d191f6fd46702.nq.gz
-    ├── 60398a72728706c4ef0160842a236feb5d6f1bbd.nq.gz
-    ├── 6050716381a76f35e216abdae72df2791064e8fd.nq.gz
-    ├── 607485625888a42eb5e4adfc9c8d361d28fa7370.nq.gz
-    ├── 609bc8df280123a446f0c0db4e5e1a9bc7e41dcd.nq.gz
-    ├── 613a4360b3ca55fc10f1eb3caaa40aa06331edae.nq.gz
-    ├── 6201b6028647bf1bd15170cb92c510c1356be106.nq.gz
-    └── 6216b0594da34af2886b6c7329996675226befd0.nq.gz
+    └── 5dedebbdaf314077286c9ac8e04470b244b201e9.nq.gz
 
-13 directories, 200 files
+15 directories, 200 files
 ```
 
 | Directory | What it contains |
@@ -263,10 +263,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 | `branch/` | Branch metadata. |
 | `tag/` | Tag metadata. |
 | `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
 
 ## Source repository
 
 [near/near-cli-rs](https://github.com/near/near-cli-rs)
 
 ---
-*Parsed on 2026-05-10 by [repolex](https://repolex.ai)*
+*Parsed on 2026-11-22 by [repolex](https://repolex.ai)*
